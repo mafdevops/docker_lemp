@@ -3,16 +3,15 @@ version: '3'
 services:
 
   nginx:
-    image: nginx:latest
+    image: 'bitnami/nginx'
     ports:
-      - '8080:80'
+      - '80:80'
     links:
       - phpfpm
     volumes:
-      - ./logs/access.log:/opt/logs/myapp-access.log
-      - ./logs/error.log:/opt/logs/myapp-error.log
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./logs/access.log:/opt/bitnami/nginx/logs/myapp-access.log
+      - ./logs/error.log:/opt/bitnami/nginx/logs/myapp-error.log
+      - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
       - ./public:/myapps
 
   phpfpm:
