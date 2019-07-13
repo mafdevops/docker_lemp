@@ -10,7 +10,7 @@ services:
       - phpfpm
     volumes:
       - ./nginx/app.conf:/opt/bitnami/nginx/conf/server_blocks/app.conf
-      - ./public:/myapps
+      - ./public:/app
 
   phpfpm:
     image: 'bitnami/php-fpm'
