@@ -5,7 +5,7 @@ services:
   nginx:
     image: 'bitnami/nginx'
     ports:
-      - '80:80'
+      - '8050:8080'
     links:
       - phpfpm
     volumes:
