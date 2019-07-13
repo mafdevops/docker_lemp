@@ -9,7 +9,7 @@ services:
     links:
       - phpfpm
     volumes:
-      - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
+      - ./nginx/app.conf:/opt/bitnami/nginx/conf/server_blocks/app.conf
       - ./public:/myapps
 
   phpfpm:
