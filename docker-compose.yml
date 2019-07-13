@@ -14,7 +14,7 @@ services:
       - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
       - ./public:/myapps
     command:
-      - service nginx start
+      - bash -c "service nginx start"
 
 
   phpfpm:
