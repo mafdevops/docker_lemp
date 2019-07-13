@@ -13,6 +13,8 @@ services:
       - ./logs/error.log:/opt/bitnami/nginx/logs/myapp-error.log
       - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
       - ./public:/myapps
+    command:
+      - service nginx start
 
 
   phpfpm:
