@@ -9,8 +9,6 @@ services:
     links:
       - phpfpm
     volumes:
-      - ./logs/access.log:/opt/bitnami/nginx/logs/myapp-access.log
-      - ./logs/error.log:/opt/bitnami/nginx/logs/myapp-error.log
       - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
       - ./public:/myapps
 
