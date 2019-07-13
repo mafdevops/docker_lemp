@@ -9,9 +9,9 @@ services:
     links:
       - phpfpm
     volumes:
-      - ./logs/access.log:/opt/bitnami/nginx/logs/myapp-access.log
-      - ./logs/error.log:/opt/bitnami/nginx/logs/myapp-error.log
-      - ./nginx/app.conf:/bitnami/nginx/conf/vhosts/app.conf
+      - ./logs/access.log:/opt/logs/myapp-access.log
+      - ./logs/error.log:/opt/logs/myapp-error.log
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./public:/myapps
     command:
       - bash -c "service nginx start"
